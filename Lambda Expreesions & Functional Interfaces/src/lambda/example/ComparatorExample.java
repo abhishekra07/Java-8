@@ -2,7 +2,6 @@ package lambda.example;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class ComparatorExample {
@@ -13,18 +12,10 @@ public class ComparatorExample {
 		books.add(new Book("Second Book",2));
 		books.add(new Book("Third Book",3));
 		books.add(new Book("Forth Book",4));
-		Collections.sort(books, new CustomConparator());
+		Collections.sort(books, (book1, book2) -> book1.getName().compareTo(book2.getName()));
 		System.out.println("list " + books);
 	}
 
-}
-
-class  CustomConparator implements Comparator<Book> {
-
-	@Override
-	public int compare(Book book1, Book book2) {
-		return book1.getName().compareTo(book2.getName());
-	}
 }
 
 class Book {
