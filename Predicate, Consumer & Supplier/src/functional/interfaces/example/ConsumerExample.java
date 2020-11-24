@@ -1,4 +1,4 @@
-package lambda.example;
+package functional.interfaces.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
